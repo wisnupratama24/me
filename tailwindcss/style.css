@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html.dark {
+  @apply transition-all duration-200 ease-in-out bg-black-100;
+}
+
+html:not(.dark) {
+  @apply bg-gray-100;
+}
+
+.home-body a.button-tailwind {
+  @apply transition-all duration-200;
+  box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.home-body a.button-tailwind:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5%);
+}
+
+.home-body .drop-me:hover {
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+  transform: translateY(-5%);
+}
+
+.resume-skills .bootstrap,
+.resume-skills .react-icon,
+.resume-skills .tailwind-icon,
+.resume-skills .express-icon,
+.resume-skills .node-icon,
+.resume-skills .figma-icon,
+.resume-skills .yii-icon,
+.resume-skills .codeigniter-icon {
+  @apply transition transition-all duration-200 h-16 w-20 cursor-pointer;
+}
+
+.resume-skills .bootstrap {
+  fill: #563d7c;
+}
+
+.resume-skills .bootstrap:hover,
+.resume-skills .react-icon:hover,
+.resume-skills .tailwind-icon:hover,
+.resume-skills .express-icon:hover,
+.resume-skills .yii-icon:hover,
+.resume-skills .node-icon:hover,
+.resume-skills .codeigniter-icon:hover,
+.resume-skills .figma-icon:hover {
+  transform: translateY(-5%);
+  transform: scale(1.1);
+}
+
+.resume-skills .react-icon {
+  fill: #53c1de;
+}

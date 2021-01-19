@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+import { createBrowserHistory } from "history";
+import { ABOUT, BLOG, HOME, PORTFOLIO, RESUME } from "./constants/url";
+import {
+  HomePage,
+  Page404,
+  AboutPage,
+  ResumePage,
+  PortfolioPage,
+  BlogPage,
+} from "./pages";
 
 function App() {
+  const history = createBrowserHistory({
+    basename: process.env.REACT_APP_BASE_URL,
+  });
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router history={history}>
+        <Switch>
+          <Route exact path={HOME} component={HomePage} />
+          <Route exact path={ABOUT} component={AboutPage} />
+          <Route exact path={RESUME} component={ResumePage} />
+          <Route exact path={PORTFOLIO} component={PortfolioPage} />
+          <Route exact path={BLOG} component={BlogPage} />
+          <Route path='*' exact component={Page404} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
