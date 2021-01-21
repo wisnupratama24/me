@@ -32,7 +32,7 @@ Logo.DropMe = function LogoDropMe({ logo, alt }) {
 Logo.Content = function LogoContent({ logo, text, to }) {
   return (
     <div className='flex items-center'>
-      <img src={logo} alt={text} />
+      <img src={logo} alt={text} className='md:h-8 h-6' />
       <Link
         to={to}
         className='lg:text-xl md:text-lg text-md ml-4 dark:text-gray-100 dark:hover:text-orange-100 hover:text-orange-100 transition-all duration-200'>

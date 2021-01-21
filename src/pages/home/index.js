@@ -26,7 +26,7 @@ export default function Home({ history }) {
       <section className='home-navbar'>
         <Navbar />
       </section>
-      <section className='home-body lg:container lg:p-18 md:p-12 p-10 mx-auto'>
+      <section className='home-body lg:container lg:p-18 md:p-12 p-4 mx-auto'>
         <div className=''>
           <div className='flex items-center'>
             <img
@@ -35,7 +35,7 @@ export default function Home({ history }) {
               className='relative ml-5 lg:ml-10 xl:ml-32 h-32 md:h-40 lg:h-full'
             />
           </div>
-          <section className='bg-white  dark:bg-black-200 rounded-lg -mt-12 px-7 lg:px-10 xl:px-32 lg:pt-20'>
+          <section className='bg-white dark:bg-black-200 rounded-lg -mt-12 px-7  lg:px-10 xl:px-32 lg:pt-20'>
             <section className='pt-16 pb-10'>
               <h3 className='xl:text-4xl md:text-2xl text-xl font-bold text-black-100 dark:text-gray-100'>
                 Wisnu Pratama
@@ -52,7 +52,7 @@ export default function Home({ history }) {
 
               <div className='w-full border mt-5 border-gray-100 dark:border-black-100 dark:opacity-5'></div>
               <div className='lg:mt-10 mt-5 border-l-4'>
-                <div className='px-5 lg:text-xl text-lg md:text-left text-center dark:text-gray-100 w-full lg:w-3/4 leading-relaxed'>
+                <div className='md:px-5 p-2 lg:text-xl md:text-lg xs:text-sm md:text-left text-center dark:text-gray-100 w-full lg:w-3/4 md:leading-relaxed leading-2'>
                   I’m currently working as a
                   <span className='font-medium text-orange-100'>
                     {" "}
@@ -78,10 +78,11 @@ export default function Home({ history }) {
               </div>
             </section>
 
-            <section className='pb-10 pt-5 flex justify-evenly '>
+            <section className='pb-10 pt-5 grid md:grid-cols-4 gap-10 md:gap-0 grid-cols-2 justify-items-center'>
               <Logo.Content logo={Diamond} text='About' to={ABOUT} />
               <Logo.Content logo={Touch} text='Portfolio' to={PORTFOLIO} />
               <Logo.Content logo={Rocket} text='Resume' to={RESUME} />
+
               <Logo.Content logo={Pencil} text='Blog' to={BLOG} />
             </section>
 
@@ -91,7 +92,7 @@ export default function Home({ history }) {
                 <img src={Hello} alt='logo hello' className='lg:h-8 h-6 mx-3' />{" "}
               </h3>
 
-              <div className='mt-10 grid lg:grid-cols-4 grid-cols-2 w-full mx-auto'>
+              <div className='mt-10 grid md:grid-cols-4 grid-cols-2 w-full mx-auto'>
                 <a
                   href='mailto:wisnuputrapratama24'
                   target='_blank'
