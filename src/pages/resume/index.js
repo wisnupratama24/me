@@ -63,7 +63,7 @@ export default function Resume() {
               title='Programmer'
               textLink='Garuda Sarana Sejahtera'
               link='https://klikgss.com/'
-              long='Feb 2019 - Des 2020'>
+              long='Feb 2019 - Feb 2021'>
               Working as Programmer for CV. Garuda Sarana Sejahtera, i make some
               project, among them sijaksa, accounting, and program for control
               student in school like register new student, payment, etc.
